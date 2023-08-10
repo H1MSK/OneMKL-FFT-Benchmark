@@ -36,7 +36,7 @@ float checkDistance(bool reverse) {
             auto distance = (reverse ? buf_one_in[i * W + j]
                                      : OneDftiReadComplex(buf_one_fft, i, j)) -
                             OneDftiComplex(buf_soft[i * (W + 1) + j]);
-            auto this_distance = abs(distance);
+            auto this_distance = abs(distance) / (reverse ? W : 1);
             (reverse ? error_bw : error_fw).add(this_distance);
             if (this_distance > max_distance)
                 max_distance = this_distance;
@@ -80,7 +80,7 @@ int main() {
         SoftFftCompute2DInPlace(true, buf_soft, soft_timer_b);
         OneDftiCompute2D(true, buf_one_fft, buf_one_in, dfti_timer_b);
 
-        float bw_dis = checkDistance(true) / W;
+        float bw_dis = checkDistance(true);
 
         cerr << "iter #" << iter << ": fw error=" << fw_dis
              << ", bw error=" << bw_dis << '\n'

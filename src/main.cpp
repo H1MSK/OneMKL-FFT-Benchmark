@@ -16,6 +16,8 @@ OneDftiReal buf_one_fft[(W + 2) * (H * 2)];
 TimeTest soft_timer_f, soft_timer_b;
 TimeTest dfti_timer_f, dfti_timer_b;
 
+    Stat<float> error_fw, error_bw;
+
 void prepareBuffers() {
     for (int i = 0, ptr = 0; i < W; ++i) {
         for (int j = 0; j < H; ++j) {
@@ -35,6 +37,7 @@ float checkDistance(bool reverse) {
                                      : OneDftiReadComplex(buf_one_fft, i, j)) -
                             OneDftiComplex(buf_soft[i * (W + 1) + j]);
             auto this_distance = abs(distance);
+            (reverse ? error_bw : error_fw).add(this_distance);
             if (this_distance > max_distance)
                 max_distance = this_distance;
         }
@@ -62,8 +65,6 @@ int main() {
     dfti_timer_f.reset();
     dfti_timer_b.reset();
 
-    Stat<float> error_fw, error_bw;
-
     error_fw.reset();
     error_bw.reset();
 
@@ -75,13 +76,11 @@ int main() {
         OneDftiCompute2D(false, buf_one_in, buf_one_fft, dfti_timer_f);
 
         float fw_dis = checkDistance(false);
-        error_fw.add(fw_dis);
 
         SoftFftCompute2DInPlace(true, buf_soft, soft_timer_b);
         OneDftiCompute2D(true, buf_one_fft, buf_one_in, dfti_timer_b);
 
         float bw_dis = checkDistance(true) / W;
-        error_bw.add(bw_dis);
 
         cerr << "iter #" << iter << ": fw error=" << fw_dis
              << ", bw error=" << bw_dis << '\n'

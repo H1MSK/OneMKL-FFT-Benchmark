@@ -113,7 +113,7 @@ int main() {
          << error_fw.to_string([](float x) { return std::to_string(x); })
          << '\n'
          << "\tBackward "
-         << error_fw.to_string([](float x) { return std::to_string(x); })
+         << error_bw.to_string([](float x) { return std::to_string(x); })
          << '\n'
          << flush;
 

@@ -1,5 +1,5 @@
 CPU:	Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz x 12
-MEM:	16139384 kB	
+MEM:	16139376 kB	
 DIST:	Ubuntu 22.04.3 LTS
 ONEAPI:	2023.2.0
 
@@ -8,128 +8,128 @@ MKL_THREADING=sequential MKL_MPI=intelmpi WITH_OFAST=OFF:
 
 Time:
 	Forward:
-		OneAPI   max=44613080ns, min=14459116ns, avg=20113169ns
-		Software max=62334249ns, min=24526698ns, avg=38691937ns
-		Boosted  max=1.397219x, min=1.696279x, avg=1.923712x
+		OneAPI   max=43345792ns, min=12269706ns, avg=21623753ns
+		Software max=50811858ns, min=23778892ns, avg=27302828ns
+		Boosted  max=1.172244x, min=1.938016x, avg=1.262631x
 	Backward:
-		OneAPI   max=32223455ns, min=15639875ns, avg=16696100ns
-		Software max=39712730ns, min=22409539ns, avg=23650495ns
-		Boosted  max=1.232417x, min=1.432847x, avg=1.416528x
+		OneAPI   max=30697479ns, min=14670689ns, avg=15055513ns
+		Software max=97758840ns, min=22810680ns, avg=24765794ns
+		Boosted  max=3.184588x, min=1.554847x, avg=1.644965x
 Error:
-	Forward  max=0.001696, min=0.001038, avg=0.001276
-	Backward max=0.001696, min=0.001038, avg=0.001276
+	Forward  max=0.002022, min=0.000000, avg=0.000314
+	Backward max=0.001755, min=0.000000, avg=0.000332
 
 
 MKL_THREADING=sequential MKL_MPI=intelmpi WITH_OFAST=ON:
 
 Time:
 	Forward:
-		OneAPI   max=44176595ns, min=14340501ns, avg=19685643ns
-		Software max=63508497ns, min=24466946ns, avg=38443660ns
-		Boosted  max=1.437605x, min=1.706143x, avg=1.952878x
+		OneAPI   max=40207737ns, min=14155338ns, avg=21657364ns
+		Software max=52566307ns, min=25713744ns, avg=29031632ns
+		Boosted  max=1.307368x, min=1.816540x, avg=1.340497x
 	Backward:
-		OneAPI   max=28303765ns, min=15959443ns, avg=16913055ns
-		Software max=37751795ns, min=22684333ns, avg=24142024ns
-		Boosted  max=1.333808x, min=1.421374x, avg=1.427419x
+		OneAPI   max=30904924ns, min=14747580ns, avg=15419995ns
+		Software max=58818339ns, min=24414342ns, avg=25557818ns
+		Boosted  max=1.903203x, min=1.655481x, avg=1.657447x
 Error:
-	Forward  max=0.001726, min=0.001038, avg=0.001281
-	Backward max=0.001726, min=0.001038, avg=0.001281
+	Forward  max=0.002002, min=0.000000, avg=0.000313
+	Backward max=0.001954, min=0.000000, avg=0.000332
 
 
 MKL_THREADING=sequential MKL_MPI=openmpi WITH_OFAST=OFF:
 
 Time:
 	Forward:
-		OneAPI   max=42256212ns, min=14436072ns, avg=19937691ns
-		Software max=62358130ns, min=27161696ns, avg=39942961ns
-		Boosted  max=1.475715x, min=1.881516x, avg=2.003389x
+		OneAPI   max=39505978ns, min=14278934ns, avg=21829418ns
+		Software max=52159503ns, min=25867597ns, avg=28856630ns
+		Boosted  max=1.320294x, min=1.811592x, avg=1.321915x
 	Backward:
-		OneAPI   max=29184416ns, min=16187383ns, avg=16629888ns
-		Software max=38366709ns, min=22776680ns, avg=25052506ns
-		Boosted  max=1.314630x, min=1.407064x, avg=1.506475x
+		OneAPI   max=31086078ns, min=14599793ns, avg=15209446ns
+		Software max=41955230ns, min=23347274ns, avg=25597002ns
+		Boosted  max=1.349647x, min=1.599151x, avg=1.682967x
 Error:
-	Forward  max=0.001777, min=0.001007, avg=0.001266
-	Backward max=0.001777, min=0.001007, avg=0.001266
+	Forward  max=0.001907, min=0.000000, avg=0.000314
+	Backward max=0.001840, min=0.000000, avg=0.000333
 
 
 MKL_THREADING=sequential MKL_MPI=openmpi WITH_OFAST=ON:
 
 Time:
 	Forward:
-		OneAPI   max=42171208ns, min=14493428ns, avg=18739021ns
-		Software max=59488110ns, min=28277746ns, avg=38702506ns
-		Boosted  max=1.410633x, min=1.951074x, avg=2.065343x
+		OneAPI   max=42763867ns, min=14281563ns, avg=21186232ns
+		Software max=50351744ns, min=25771692ns, avg=29475931ns
+		Boosted  max=1.177437x, min=1.804543x, avg=1.391278x
 	Backward:
-		OneAPI   max=29102825ns, min=16542951ns, avg=16755424ns
-		Software max=42633921ns, min=22434731ns, avg=24783732ns
-		Boosted  max=1.464941x, min=1.356151x, avg=1.479147x
+		OneAPI   max=31595643ns, min=14851352ns, avg=15591397ns
+		Software max=50498428ns, min=23192932ns, avg=25552935ns
+		Boosted  max=1.598272x, min=1.561671x, avg=1.638913x
 Error:
-	Forward  max=0.001907, min=0.001036, avg=0.001270
-	Backward max=0.001907, min=0.001036, avg=0.001270
+	Forward  max=0.001803, min=0.000000, avg=0.000313
+	Backward max=0.001852, min=0.000000, avg=0.000332
 
 
 MKL_THREADING=sequential MKL_MPI=mpich WITH_OFAST=OFF:
 
 Time:
 	Forward:
-		OneAPI   max=40773612ns, min=14880632ns, avg=19022290ns
-		Software max=64988577ns, min=27477567ns, avg=41739626ns
-		Boosted  max=1.593888x, min=1.846532x, avg=2.194248x
+		OneAPI   max=38799108ns, min=11145239ns, avg=21830739ns
+		Software max=53773447ns, min=26270083ns, avg=28877086ns
+		Boosted  max=1.385945x, min=2.357068x, avg=1.322772x
 	Backward:
-		OneAPI   max=32088086ns, min=16618625ns, avg=17155888ns
-		Software max=38824055ns, min=22841076ns, avg=25290381ns
-		Boosted  max=1.209921x, min=1.374426x, avg=1.474152x
+		OneAPI   max=31506665ns, min=14914437ns, avg=15708405ns
+		Software max=70749271ns, min=24716159ns, avg=25686048ns
+		Boosted  max=2.245533x, min=1.657197x, avg=1.635179x
 Error:
-	Forward  max=0.001761, min=0.001016, avg=0.001284
-	Backward max=0.001761, min=0.001016, avg=0.001284
+	Forward  max=0.001895, min=0.000000, avg=0.000314
+	Backward max=0.001744, min=0.000000, avg=0.000333
 
 
 MKL_THREADING=sequential MKL_MPI=mpich WITH_OFAST=ON:
 
 Time:
 	Forward:
-		OneAPI   max=42328787ns, min=13060469ns, avg=18637310ns
-		Software max=62055139ns, min=25218459ns, avg=38443377ns
-		Boosted  max=1.466027x, min=1.930900x, avg=2.062711x
+		OneAPI   max=39537128ns, min=13390283ns, avg=20038512ns
+		Software max=53389244ns, min=26523042ns, avg=29786088ns
+		Boosted  max=1.350357x, min=1.980768x, avg=1.486442x
 	Backward:
-		OneAPI   max=25951997ns, min=16077226ns, avg=16313306ns
-		Software max=44555517ns, min=23060199ns, avg=24963340ns
-		Boosted  max=1.716843x, min=1.434340x, avg=1.530244x
+		OneAPI   max=31293893ns, min=14702821ns, avg=15388946ns
+		Software max=100441483ns, min=25196485ns, avg=26009356ns
+		Boosted  max=3.209619x, min=1.713718x, avg=1.690132x
 Error:
-	Forward  max=0.001642, min=0.000984, avg=0.001274
-	Backward max=0.001642, min=0.000984, avg=0.001274
+	Forward  max=0.001907, min=0.000000, avg=0.000314
+	Backward max=0.001728, min=0.000000, avg=0.000332
 
 
 MKL_THREADING=sequential MKL_MPI=mpich2 WITH_OFAST=OFF:
 
 Time:
 	Forward:
-		OneAPI   max=41850434ns, min=10911244ns, avg=18175244ns
-		Software max=65043182ns, min=24583464ns, avg=41455456ns
-		Boosted  max=1.554182x, min=2.253040x, avg=2.280875x
+		OneAPI   max=39430407ns, min=14229834ns, avg=22806371ns
+		Software max=49117406ns, min=26132186ns, avg=27907935ns
+		Boosted  max=1.245673x, min=1.836437x, avg=1.223690x
 	Backward:
-		OneAPI   max=32341240ns, min=15437535ns, avg=17551293ns
-		Software max=38407075ns, min=22775475ns, avg=25748164ns
-		Boosted  max=1.187557x, min=1.475331x, avg=1.467024x
+		OneAPI   max=31290310ns, min=14776814ns, avg=15506532ns
+		Software max=45691925ns, min=23206214ns, avg=25762767ns
+		Boosted  max=1.460258x, min=1.570448x, avg=1.661414x
 Error:
-	Forward  max=0.001777, min=0.001038, avg=0.001267
-	Backward max=0.001777, min=0.001038, avg=0.001267
+	Forward  max=0.001968, min=0.000000, avg=0.000314
+	Backward max=0.001730, min=0.000000, avg=0.000333
 
 
 MKL_THREADING=sequential MKL_MPI=mpich2 WITH_OFAST=ON:
 
 Time:
 	Forward:
-		OneAPI   max=40432521ns, min=14422910ns, avg=17597240ns
-		Software max=66210434ns, min=26493634ns, avg=39834609ns
-		Boosted  max=1.637554x, min=1.836913x, avg=2.263685x
+		OneAPI   max=37212187ns, min=14070460ns, avg=20341199ns
+		Software max=51945049ns, min=27212222ns, avg=30093016ns
+		Boosted  max=1.395915x, min=1.933997x, avg=1.479412x
 	Backward:
-		OneAPI   max=32412542ns, min=16427909ns, avg=16857234ns
-		Software max=39871274ns, min=23995221ns, avg=25364847ns
-		Boosted  max=1.230119x, min=1.460637x, avg=1.504686x
+		OneAPI   max=30507199ns, min=14783952ns, avg=15357609ns
+		Software max=67136401ns, min=25011369ns, avg=26614195ns
+		Boosted  max=2.200674x, min=1.691792x, avg=1.732965x
 Error:
-	Forward  max=0.001761, min=0.001001, avg=0.001274
-	Backward max=0.001761, min=0.001001, avg=0.001274
+	Forward  max=0.001907, min=0.000000, avg=0.000314
+	Backward max=0.001778, min=0.000000, avg=0.000333
 
 
 MKL_THREADING=intel_thread MKL_MPI=intelmpi WITH_OFAST=OFF:
@@ -232,125 +232,125 @@ MKL_THREADING=tbb_thread MKL_MPI=intelmpi WITH_OFAST=OFF:
 
 Time:
 	Forward:
-		OneAPI   max=39361953ns, min=12964956ns, avg=18150312ns
-		Software max=70763368ns, min=24558310ns, avg=41310892ns
-		Boosted  max=1.797761x, min=1.894207x, avg=2.276043x
+		OneAPI   max=39254776ns, min=13647274ns, avg=19713210ns
+		Software max=52811551ns, min=26184323ns, avg=30289396ns
+		Boosted  max=1.345353x, min=1.918649x, avg=1.536502x
 	Backward:
-		OneAPI   max=32224464ns, min=16372332ns, avg=17057568ns
-		Software max=38808432ns, min=22772964ns, avg=25340490ns
-		Boosted  max=1.204316x, min=1.390942x, avg=1.485586x
+		OneAPI   max=31061582ns, min=14937600ns, avg=15399709ns
+		Software max=53287878ns, min=24563013ns, avg=25648351ns
+		Boosted  max=1.715556x, min=1.644375x, avg=1.665509x
 Error:
-	Forward  max=0.001831, min=0.001014, avg=0.001296
-	Backward max=0.001831, min=0.001014, avg=0.001296
+	Forward  max=0.002013, min=0.000000, avg=0.000313
+	Backward max=0.001712, min=0.000000, avg=0.000332
 
 
 MKL_THREADING=tbb_thread MKL_MPI=intelmpi WITH_OFAST=ON:
 
 Time:
 	Forward:
-		OneAPI   max=35026133ns, min=10620541ns, avg=18461139ns
-		Software max=60759452ns, min=24820060ns, avg=39471109ns
-		Boosted  max=1.734689x, min=2.336986x, avg=2.138064x
+		OneAPI   max=39910040ns, min=12424868ns, avg=20487142ns
+		Software max=53420264ns, min=25743567ns, avg=29786853ns
+		Boosted  max=1.338517x, min=2.071939x, avg=1.453929x
 	Backward:
-		OneAPI   max=28477073ns, min=14461457ns, avg=16540934ns
-		Software max=38537809ns, min=22801452ns, avg=24821938ns
-		Boosted  max=1.353292x, min=1.576705x, avg=1.500637x
+		OneAPI   max=31000909ns, min=14816457ns, avg=15287634ns
+		Software max=78328898ns, min=24301689ns, avg=25646618ns
+		Boosted  max=2.526664x, min=1.640182x, avg=1.677605x
 Error:
-	Forward  max=0.001660, min=0.000880, avg=0.001266
-	Backward max=0.001660, min=0.000880, avg=0.001266
+	Forward  max=0.001761, min=0.000000, avg=0.000313
+	Backward max=0.001742, min=0.000000, avg=0.000333
 
 
 MKL_THREADING=tbb_thread MKL_MPI=openmpi WITH_OFAST=OFF:
 
 Time:
 	Forward:
-		OneAPI   max=40437142ns, min=13637944ns, avg=18004012ns
-		Software max=64937382ns, min=24265510ns, avg=40962480ns
-		Boosted  max=1.605885x, min=1.779265x, avg=2.275186x
+		OneAPI   max=40014279ns, min=13954035ns, avg=20344298ns
+		Software max=51387117ns, min=25945218ns, avg=28854741ns
+		Boosted  max=1.284219x, min=1.859334x, avg=1.418321x
 	Backward:
-		OneAPI   max=31436819ns, min=16373233ns, avg=16953380ns
-		Software max=39765140ns, min=22656851ns, avg=25652366ns
-		Boosted  max=1.264922x, min=1.383774x, avg=1.513112x
+		OneAPI   max=30931304ns, min=14697543ns, avg=15215442ns
+		Software max=77694697ns, min=23875814ns, avg=25744086ns
+		Boosted  max=2.511847x, min=1.624477x, avg=1.691971x
 Error:
-	Forward  max=0.001916, min=0.001007, avg=0.001272
-	Backward max=0.001916, min=0.001007, avg=0.001272
+	Forward  max=0.001916, min=0.000000, avg=0.000313
+	Backward max=0.001838, min=0.000000, avg=0.000332
 
 
 MKL_THREADING=tbb_thread MKL_MPI=openmpi WITH_OFAST=ON:
 
 Time:
 	Forward:
-		OneAPI   max=42018708ns, min=10872177ns, avg=17554534ns
-		Software max=62726322ns, min=24847910ns, avg=38496567ns
-		Boosted  max=1.492819x, min=2.285459x, avg=2.192970x
+		OneAPI   max=38959793ns, min=14262494ns, avg=20910648ns
+		Software max=55228388ns, min=26286697ns, avg=29575182ns
+		Boosted  max=1.417574x, min=1.843064x, avg=1.414360x
 	Backward:
-		OneAPI   max=23671368ns, min=16217626ns, avg=16584441ns
-		Software max=48610641ns, min=23050533ns, avg=25346783ns
-		Boosted  max=2.053563x, min=1.421326x, avg=1.528347x
+		OneAPI   max=31374551ns, min=14741556ns, avg=15489093ns
+		Software max=53351766ns, min=24924938ns, avg=25729052ns
+		Boosted  max=1.700479x, min=1.690794x, avg=1.661108x
 Error:
-	Forward  max=0.001726, min=0.000977, avg=0.001274
-	Backward max=0.001726, min=0.000977, avg=0.001274
+	Forward  max=0.001815, min=0.000000, avg=0.000313
+	Backward max=0.001896, min=0.000000, avg=0.000332
 
 
 MKL_THREADING=tbb_thread MKL_MPI=mpich WITH_OFAST=OFF:
 
 Time:
 	Forward:
-		OneAPI   max=44458309ns, min=10737698ns, avg=19092746ns
-		Software max=65389572ns, min=25275550ns, avg=41350349ns
-		Boosted  max=1.470807x, min=2.353908x, avg=2.165762x
+		OneAPI   max=39486667ns, min=14338128ns, avg=21555388ns
+		Software max=62152383ns, min=26020146ns, avg=28808121ns
+		Boosted  max=1.574009x, min=1.814752x, avg=1.336470x
 	Backward:
-		OneAPI   max=32339026ns, min=15858117ns, avg=17073596ns
-		Software max=40015645ns, min=23090903ns, avg=26355098ns
-		Boosted  max=1.237379x, min=1.456094x, avg=1.543617x
+		OneAPI   max=30901308ns, min=13289397ns, avg=15348708ns
+		Software max=91609161ns, min=24770602ns, avg=25470642ns
+		Boosted  max=2.964572x, min=1.863937x, avg=1.659465x
 Error:
-	Forward  max=0.001907, min=0.001007, avg=0.001287
-	Backward max=0.001907, min=0.001007, avg=0.001287
+	Forward  max=0.001987, min=0.000000, avg=0.000314
+	Backward max=0.001712, min=0.000000, avg=0.000333
 
 
 MKL_THREADING=tbb_thread MKL_MPI=mpich WITH_OFAST=ON:
 
 Time:
 	Forward:
-		OneAPI   max=40196267ns, min=12159280ns, avg=17159336ns
-		Software max=64909671ns, min=26237939ns, avg=41126355ns
-		Boosted  max=1.614818x, min=2.157853x, avg=2.396734x
+		OneAPI   max=40128199ns, min=14133607ns, avg=20504764ns
+		Software max=56205969ns, min=25861200ns, avg=28940729ns
+		Boosted  max=1.400660x, min=1.829767x, avg=1.411415x
 	Backward:
-		OneAPI   max=26027630ns, min=15405447ns, avg=15816044ns
-		Software max=41444661ns, min=22822342ns, avg=25258369ns
-		Boosted  max=1.592333x, min=1.481446x, avg=1.597009x
+		OneAPI   max=31000970ns, min=14705923ns, avg=15290220ns
+		Software max=84305873ns, min=24574012ns, avg=25518867ns
+		Boosted  max=2.719459x, min=1.671028x, avg=1.668967x
 Error:
-	Forward  max=0.001748, min=0.001038, avg=0.001283
-	Backward max=0.001748, min=0.001038, avg=0.001283
+	Forward  max=0.001968, min=0.000000, avg=0.000314
+	Backward max=0.001880, min=0.000000, avg=0.000332
 
 
 MKL_THREADING=tbb_thread MKL_MPI=mpich2 WITH_OFAST=OFF:
 
 Time:
 	Forward:
-		OneAPI   max=42580299ns, min=11089468ns, avg=19186725ns
-		Software max=78722335ns, min=24662887ns, avg=40063880ns
-		Boosted  max=1.848797x, min=2.223992x, avg=2.088104x
+		OneAPI   max=39002426ns, min=13331323ns, avg=19621656ns
+		Software max=53734085ns, min=26269490ns, avg=29350031ns
+		Boosted  max=1.377711x, min=1.970509x, avg=1.495798x
 	Backward:
-		OneAPI   max=34243803ns, min=16165487ns, avg=16844443ns
-		Software max=46032842ns, min=22653784ns, avg=26299529ns
-		Boosted  max=1.344268x, min=1.401367x, avg=1.561318x
+		OneAPI   max=30945204ns, min=14771000ns, avg=15326703ns
+		Software max=48753186ns, min=24887852ns, avg=25815898ns
+		Boosted  max=1.575468x, min=1.684913x, avg=1.684374x
 Error:
-	Forward  max=0.001726, min=0.001007, avg=0.001284
-	Backward max=0.001726, min=0.001007, avg=0.001284
+	Forward  max=0.001916, min=0.000000, avg=0.000314
+	Backward max=0.001740, min=0.000000, avg=0.000333
 
 
 MKL_THREADING=tbb_thread MKL_MPI=mpich2 WITH_OFAST=ON:
 
 Time:
 	Forward:
-		OneAPI   max=53531993ns, min=10661884ns, avg=17180064ns
-		Software max=64596683ns, min=29040294ns, avg=40660634ns
-		Boosted  max=1.206693x, min=2.723749x, avg=2.366734x
+		OneAPI   max=39456227ns, min=14423367ns, avg=21577912ns
+		Software max=62856510ns, min=25939704ns, avg=28106764ns
+		Boosted  max=1.593069x, min=1.798450x, avg=1.302571x
 	Backward:
-		OneAPI   max=28702415ns, min=15124928ns, avg=16711356ns
-		Software max=42868314ns, min=23260505ns, avg=25877871ns
-		Boosted  max=1.493544x, min=1.537892x, avg=1.548520x
+		OneAPI   max=36524850ns, min=14925967ns, avg=15546243ns
+		Software max=82312589ns, min=23856154ns, avg=25416285ns
+		Boosted  max=2.253605x, min=1.598299x, avg=1.634883x
 Error:
-	Forward  max=0.001777, min=0.000977, avg=0.001287
-	Backward max=0.001777, min=0.000977, avg=0.001287
+	Forward  max=0.001907, min=0.000000, avg=0.000314
+	Backward max=0.001665, min=0.000000, avg=0.000333

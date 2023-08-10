@@ -12,7 +12,7 @@ CPU_NAME=`cat /proc/cpuinfo | grep -m1 "model name" | awk '{$1=$2=$3=""; print s
 MEM_COUNT=`cat /proc/meminfo | grep MemTotal | awk '{print $2, $3}'`
 DIST_NAME=`cat /etc/os-release | grep PRETTY_NAME | sed -En 's/^.+\"(.+)\".*$/\1/p'`
 ONEAPI_VERSION=`ls -al /opt/intel/oneapi/compiler/  | grep latest | sed -En 's/.+latest -> (.+)$/\1/p'`
-echo -e "CPU:\t$CPU_NAME x $THREAD_COUNT\nMEM:\t$MEM_COUNT\t\nDIST:\t$DIST_NAME\nONEAPI:$ONEAPI_VERSION" >>../result.txt
+echo -e "CPU:\t$CPU_NAME x $THREAD_COUNT\nMEM:\t$MEM_COUNT\t\nDIST:\t$DIST_NAME\nONEAPI:\t$ONEAPI_VERSION" >>../result.txt
 
 for MKL_THREADING in sequential intel_thread gnu_thread pgi_thread tbb_thread; do
     for MKL_MPI in intelmpi openmpi mpich mpich2; do

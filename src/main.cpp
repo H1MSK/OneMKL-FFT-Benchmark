@@ -67,7 +67,7 @@ int main() {
     error_fw.reset();
     error_bw.reset();
 
-    for (int iter = 0; iter < 256; ++iter) {
+    for (int iter = 0; iter < 1024; ++iter) {
         generateRandomNumbers(buffer, N);
         prepareBuffers();
 

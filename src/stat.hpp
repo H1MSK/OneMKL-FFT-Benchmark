@@ -27,6 +27,8 @@ class Stat {
                ", avg=" + fmt(avg());
     }
 
+    Stat() { reset(); }
+
  private:
     ElementType total_, min_, max_;
     size_t count_;

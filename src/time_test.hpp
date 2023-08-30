@@ -22,4 +22,6 @@ class TimeTest {
         this_time_stop_ = clock_source::now();
         stats_.add(this_time_stop_ - this_time_start_);
     }
+
+    TimeTest() { reset(); }
 };
